@@ -1,0 +1,36 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Document test API Abelon",
+        "description": "",
+        "termsOfService": "",
+        "contact": {
+            "email": ""
+        },
+        "license": {
+            "name": "Saver",
+            "url": "https://www.saver.jp/"
+        },
+        "version": "1.0.0"
+    },
+    "basePath": "/api",
+    "paths": {
+        "/admin-manage/user/list": {
+            "get": {
+                "tags": [
+                    "User Manage"
+                ],
+                "summary": "User List",
+                "responses": {
+                    "200": {
+                        "description": "{<pre style='color:white'>&emsp;  'success': true | false,\n    &emsp;  'data': {\n    &emsp;            'id': 1,\n    &emsp;            'api_token': 'eFAQOXsVkudj74VBaC0prLrbqBXP7U6TS3KwcJhQYb4SN7oxloWhgL0lMO2E',\n    &emsp;            'username': null,\n    &emsp;            'email': null,\n    &emsp;            'phone_number': 906503546\n    &emsp;          } | null,\n    &emsp;  'error': null | ...</pre>}\n    "
+                    },
+                    "404": {
+                        "description": "Building not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
