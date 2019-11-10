@@ -20,10 +20,10 @@ class CreateUserTblsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('address')->nullable();
-            $table->integer('age');
-            $table->integer('gender');
+            $table->integer('age')->nullable();;
+            $table->integer('gender')->nullable();;
             $table->text('avatar')->nullable();
-            $table->string('api_token');
+            $table->string('api_token')->nullable();;
             $table->timestamps();
         });
     }

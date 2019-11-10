@@ -22,7 +22,13 @@ class CommomController extends Controller
                 $this->error  = $Validators->errors()->first();
             }
             else{
-                
+                $login_info = array(
+                    'login_id' => $request->input('login_id'),
+                    'password' => $request->input('password')
+                );
+                if(Auth::guard('admin-web')->attempt($login_info)){
+                    $user_info = Auth::guard('admin-web')->user();
+                }
             }
         } catch (\Illuminate\Database\QueryException $ex) {
             \Log::error("[" . __METHOD__ . "][" . __LINE__ . "] error: " . $ex->getMessage());
